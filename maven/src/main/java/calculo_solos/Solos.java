@@ -2,10 +2,7 @@ package calculo_solos;
 
 public class Solos {
 	
-	
-//	private static double element( ){}
-	
-	private Element calculaSolos(int tipoSolo) {
+	private Element soloIdeal(int tipoSolo) {
 		Element elemento = new Element();
 		switch (tipoSolo) {
 			case 1:
@@ -27,6 +24,7 @@ public class Solos {
 				elemento.sethAl(0);
 				return elemento;
 			default:
+				System.out.println("Digite um solo válido");
 				return elemento;
 		}
 	}
