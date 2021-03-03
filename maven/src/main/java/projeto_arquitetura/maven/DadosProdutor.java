@@ -50,7 +50,7 @@ public class DadosProdutor{
 	public double getAreaTotal(){
 		return areaTotal;
 	}
-	public void setAreaTotal(String nomeProdutor) {
+	public void setAreaTotal(double areaTotal) {
 		this.areaTotal = areaTotal;
 	}
 	

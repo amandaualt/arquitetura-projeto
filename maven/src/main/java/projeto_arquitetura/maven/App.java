@@ -13,7 +13,7 @@ public class App {
     	
     	App app = new App();
    
-//    	dadosProd = DadosProdutor();
+//    	dadosProd = app.dadosRecebProp();
     	
     	app.elemento = app.elementRecebido();
     	 
@@ -28,63 +28,78 @@ public class App {
     public Element elementRecebido() {    	
        	Element elemento = new Element();
 
-    	Scanner lerElement = new Scanner(System.in);
+    	Scanner lerDadosProdutor = new Scanner(System.in);
     	
     	System.out.println("Digite o valor do Fósforo: ");
-    	elemento.setFosforo(lerElement.nextDouble());
+    	elemento.setFosforo(lerDadosProdutor.nextDouble());
     	
     	System.out.println("Digite o valor do Potássio: ");
-    	elemento.setPotassio(lerElement.nextDouble());
+    	elemento.setPotassio(lerDadosProdutor.nextDouble());
     	
     	System.out.println("Digite o valor do Cálcio: ");
-    	elemento.setCalcio(lerElement.nextDouble());
+    	elemento.setCalcio(lerDadosProdutor.nextDouble());
     	
     	System.out.println("Digite o valor do Magnésio: ");
-    	elemento.setMagnesio(lerElement.nextDouble());
+    	elemento.setMagnesio(lerDadosProdutor.nextDouble());
 
     	System.out.println("Digite o valor do Enxofre: ");
-    	elemento.setEnxofre(lerElement.nextDouble());
+    	elemento.setEnxofre(lerDadosProdutor.nextDouble());
  
     	System.out.println("Digite o valor do Alumínio: ");
-    	elemento.setAluminio(lerElement.nextDouble());
+    	elemento.setAluminio(lerDadosProdutor.nextDouble());
 
     	System.out.println("Digite o valor do H + Al: ");
-    	elemento.sethAl(lerElement.nextDouble());
+    	elemento.sethAl(lerDadosProdutor.nextDouble());
     	
-    	lerElement.close();
+    	lerDadosProdutor.close();
     	return elemento;
     }
     
     
-//    public DadosProdutor dadosRecebProp() {
-//    	DadosProdutor dadosProd = new DadosProdutor();
-//    	
-//    	Scanner lerElement = new Scanner(System.in);
-//    	
-//    	System.out.println("Digite o valor do Fósforo: ");
-//    	dadosProd.set(lerElement.nextDouble());
-//    	
-//    	System.out.println("Digite o valor do Potássio: ");
-//    	elemento.setPotassio(lerElement.nextDouble());
-//    	
-//    	System.out.println("Digite o valor do Cálcio: ");
-//    	elemento.setCalcio(lerElement.nextDouble());
-//    	
-//    	System.out.println("Digite o valor do Magnésio: ");
-//    	elemento.setMagnesio(lerElement.nextDouble());
-//
-//    	System.out.println("Digite o valor do Enxofre: ");
-//    	elemento.setEnxofre(lerElement.nextDouble());
-// 
-//    	System.out.println("Digite o valor do Alumínio: ");
-//    	elemento.setAluminio(lerElement.nextDouble());
-//
-//    	System.out.println("Digite o valor do H + Al: ");
-//    	elemento.sethAl(lerElement.nextDouble());
-//    	
-//    	lerElement.close();
-//    	return dadosProd;
-//    }
+    public DadosProdutor dadosRecebProp() {
+    	DadosProdutor dadosProd = new DadosProdutor();
+    	
+    	Scanner lerDadosProdutor = new Scanner(System.in);
+    	
+    	System.out.println("Nome do Produtor: ");
+    	dadosProd.setNomeProdutor(lerDadosProdutor.next());
+    	
+    	System.out.println("Data: : ");
+    	dadosProd.setDataProdutor(lerDadosProdutor.next());
+    	
+    	System.out.println("Municipio: ");
+    	dadosProd.setMunicipio(lerDadosProdutor.next());
+    	
+     	System.out.println("Área total: ");
+    	dadosProd.setAreaTotal(lerDadosProdutor.nextDouble());
+ 
+    	System.out.println("Talhão: ");
+    	dadosProd.setTalhao(lerDadosProdutor.nextInt());
+
+    	System.out.println("Área Talhão: ");
+    	dadosProd.setAreaTalhao(lerDadosProdutor.nextDouble());
+
+    	System.out.println("Matrícula do Lote: ");
+    	dadosProd.setMatriculaLote(lerDadosProdutor.nextInt());
+
+    	System.out.println("Textura de Solo: ");
+    	dadosProd.setTexturaSolo(lerDadosProdutor.nextInt());
+
+    	System.out.println("Sistema de Cultivo: ");
+    	dadosProd.setSistemaCultivo(lerDadosProdutor.nextInt());
+    	
+    	System.out.println("Responsável Técnico: ");
+    	dadosProd.setRespTecnico(lerDadosProdutor.next());
+    	
+     	System.out.println("Produnfidade da amostra de solos: ");
+    	dadosProd.setProfundAmostra(lerDadosProdutor.nextDouble());
+    	
+    	System.out.println("Resultado da análise de solos Nº: ");
+    	dadosProd.setNumAnalise(lerDadosProdutor.nextInt());
+    	
+    	lerDadosProdutor.close();
+    	return dadosProd;
+    }
     
     
     public double somaScmol(Element elemento) {
