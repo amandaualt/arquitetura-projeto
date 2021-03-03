@@ -1,29 +1,31 @@
 package projeto_arquitetura.maven;
 
 import java.util.Scanner;
-import calculo_solos.Element;
 
+import calculo_solos.*;
 
 public class App {
 	
    	Element elemento = new Element();
 
     public static void main(String[] args) {
+    	DadosProdutor dadosProd = new DadosProdutor();
+    	
     	App app = new App();
+   
+//    	dadosProd = DadosProdutor();
     	
-    	app.elemento = app.dadosRecebidos();
+    	app.elemento = app.elementRecebido();
+    	 
+    	System.out.println("S cmol: " + app.somaScmol(app.elemento));
     	
-    	System.out.println("potassio: " + app.elemento.getPotassio());
- 
-    	System.out.println("Soma: " + app.somaScmol(app.elemento));
-    	
-    	System.out.println("Soma Ctc: " + app.somaCtc(app.elemento));
+    	System.out.println("Ctc cmol: " + app.somaCtc(app.elemento));
     	
     	System.out.println("V% Atual: " + app.vAtual(app.elemento));
     }
     
     
-    public Element dadosRecebidos() {    	
+    public Element elementRecebido() {    	
        	Element elemento = new Element();
 
     	Scanner lerElement = new Scanner(System.in);
@@ -53,6 +55,38 @@ public class App {
     	return elemento;
     }
     
+    
+//    public DadosProdutor dadosRecebProp() {
+//    	DadosProdutor dadosProd = new DadosProdutor();
+//    	
+//    	Scanner lerElement = new Scanner(System.in);
+//    	
+//    	System.out.println("Digite o valor do Fósforo: ");
+//    	dadosProd.set(lerElement.nextDouble());
+//    	
+//    	System.out.println("Digite o valor do Potássio: ");
+//    	elemento.setPotassio(lerElement.nextDouble());
+//    	
+//    	System.out.println("Digite o valor do Cálcio: ");
+//    	elemento.setCalcio(lerElement.nextDouble());
+//    	
+//    	System.out.println("Digite o valor do Magnésio: ");
+//    	elemento.setMagnesio(lerElement.nextDouble());
+//
+//    	System.out.println("Digite o valor do Enxofre: ");
+//    	elemento.setEnxofre(lerElement.nextDouble());
+// 
+//    	System.out.println("Digite o valor do Alumínio: ");
+//    	elemento.setAluminio(lerElement.nextDouble());
+//
+//    	System.out.println("Digite o valor do H + Al: ");
+//    	elemento.sethAl(lerElement.nextDouble());
+//    	
+//    	lerElement.close();
+//    	return dadosProd;
+//    }
+    
+    
     public double somaScmol(Element elemento) {
     	return elemento.getPotassio() + elemento.getCalcio() + elemento.getMagnesio();
     }
@@ -64,32 +98,7 @@ public class App {
     }
     
     
-	private Element soloIdeal(int tipoSolo) {
-		Element elemento = new Element();
-		switch (tipoSolo) {
-			case 1:
-				elemento.setFosforo(9.0);
-				elemento.setPotassio(0.35);
-				elemento.setCalcio(6.0);
-				elemento.setMagnesio(1.5);
-				elemento.setEnxofre(9.0);
-				elemento.setAluminio(0);
-				elemento.sethAl(0);
-				return elemento;
-			case 2:
-				elemento.setFosforo(12.0);
-				elemento.setPotassio(0.25);
-				elemento.setCalcio(6.0);
-				elemento.setMagnesio(1.5);
-				elemento.setEnxofre(9.0);
-				elemento.setAluminio(0);
-				elemento.sethAl(0);
-				return elemento;
-			default:
-				System.out.println("Digite um solo válido");
-				return elemento;
-		}
-	}
+
     
     
 }
