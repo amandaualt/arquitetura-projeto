@@ -5,7 +5,7 @@ import java.util.Scanner;
 import calculo_solos.*;
 
 public class App {
-	
+	DadosProdutor dadosProd = new DadosProdutor();
 	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
    	Element elemento = new Element();
 
@@ -30,6 +30,7 @@ public class App {
     	app.correcaoRec = app.fontesFosf();
     	System.out.println("\n");
     	app.correcaoRec = app.correcaoPot();
+    	System.out.println(app.atualPotSolo());
     	System.out.println("\n");
     	app.correcaoRec = app.fontesPot();
     
@@ -112,7 +113,7 @@ public class App {
     }
     
     
-       public double somaScmol(Element elemento) {
+    public double somaScmol(Element elemento) {
     	return elemento.getPotassio() + elemento.getCalcio() + elemento.getMagnesio();
     }
     public double somaCtc(Element elemento) {
@@ -187,6 +188,25 @@ public class App {
     	return correcaoRec;
     }
     
+    //participação atual do potassio na CTC do solo: 
+   public double atualPotSolo() {
+	   try {
+    	return elemento.getPotassio()/(somaScmol(elemento)+elemento.gethAl())*100;
+	   }catch (Exception e) {
+		   return 0;
+	   }
+    }
+   
+   // participação ideal do potássio na ctc 
+   public double PartIdealPot() {
+	   if(dadosProd.getTexturaSolo() == 1 || dadosProd.getTexturaSolo() == 2){
+		   System.out.println("3,0%");		   
+	   }else {
+		   return 0;
+	   }
+	return 0;
+   }
+    
     public CorrecaoRecuperacao correcaoPot() {
     	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
     	Scanner lerCorrecao = new Scanner(System.in);
@@ -197,10 +217,12 @@ public class App {
     	System.out.println("Fonte de Potássio a usar: ");
     	correcaoRec.setFontPotUsar(lerCorrecao.nextInt());
     	
+    	
     	lerCorrecao.close();
     	return correcaoRec;
     	
     }
+    
     
     public CorrecaoRecuperacao fontesPot() {
     	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
