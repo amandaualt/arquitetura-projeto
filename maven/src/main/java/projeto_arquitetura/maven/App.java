@@ -17,15 +17,23 @@ public class App {
 //    	dadosProd = app.dadosRecebProp();
     	
     	app.elemento = app.elementRecebido();
-    	app.correcaoRec = app.correcaoFosf();
-    	 
+    	
+    	System.out.println("\n");
     	System.out.println("S cmol: " + app.somaScmol(app.elemento));
-    	
+    	System.out.println("\n");
     	System.out.println("Ctc cmol: " + app.somaCtc(app.elemento));
-    	
+    	System.out.println("\n");
     	System.out.println("V% Atual: " + app.vAtual(app.elemento));
-    }
+    	System.out.println("\n");
+    	app.correcaoRec = app.correcaoFosf();
+    	System.out.println("\n");
+    	app.correcaoRec = app.fontesFosf();
+    	System.out.println("\n");
+    	app.correcaoRec = app.correcaoPot();
+    	System.out.println("\n");
+    	app.correcaoRec = app.fontesPot();
     
+    }
     
     public Element elementRecebido() {    	
        	Element elemento = new Element();
@@ -116,7 +124,9 @@ public class App {
     
     
     public CorrecaoRecuperacao correcaoFosf() {
+    	
     	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
+    	
     	Scanner lerCorrecao = new Scanner(System.in);
     	
     	System.out.println("Teor de Fósforo a atingir: ");
@@ -192,6 +202,22 @@ public class App {
     	
     }
     
+    public CorrecaoRecuperacao fontesPot() {
+    	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
+    	Scanner lerFontes = new Scanner(System.in);
+    	
+    	System.out.println("1 – Cloreto de Potássio: ");
+    	correcaoRec.setCloretoPot(lerFontes.nextDouble());
+    	
+    	System.out.println("2 - Sulfato de Potássio: ");
+    	correcaoRec.setSultatoPot(lerFontes.nextDouble());
+    	
+    	System.out.println("3 – Sulf.Potássio/Mag.: ");
+    	correcaoRec.setSultatoPotMag(lerFontes.nextDouble());
+    	
+    	lerFontes.close();
+    	return correcaoRec;
+    }
     
 
     
