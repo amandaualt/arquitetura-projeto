@@ -28,9 +28,11 @@ public class App {
     	app.correcaoRec = app.correcaoFosf();
     	System.out.println("\n");
     	app.correcaoRec = app.fontesFosf();
-    	System.out.println("\n");
-    	app.correcaoRec = app.correcaoPot();
+    	System.out.println("\n");    	
     	System.out.println(app.atualPotSolo());
+    	System.out.println("Participação atual do POTÁSSIO na CTC do solo: " + app.correcaoPot());
+    	System.out.println("Participação ideal do Potássio na CTC:: " + app.PartIdealPot());
+
     	System.out.println("\n");
     	app.correcaoRec = app.fontesPot();
     
@@ -206,6 +208,15 @@ public class App {
 	   }
 	return 0;
    }
+   
+   // calculo custo:
+//   public double CustoHa() {
+//	if(((elemento.getPotassio()*correcaoRec.getPotCtcDesj()/atualPotSolo())-elemento.getPotassio()) < 0.01){
+//		 System.out.println("0.0");
+//	} else {
+//		return (elemento.getPotassio()*correcaoRec.getPotCtcDesj()/atualPotSolo())-elemento.getPotassio();
+//	}
+//   }
     
     public CorrecaoRecuperacao correcaoPot() {
     	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
