@@ -1,6 +1,6 @@
 package calculo_solos;
 
-public class correcao_recuperacao {
+public class CorrecaoRecuperacao {
 	
 	//coreção/recuperação de fosforo
 	private double teorFosfAtingir;
@@ -21,7 +21,7 @@ public class correcao_recuperacao {
 	private double fosfatoGafsa;
 	private double fosfatoDaoui;
 	private double fosfPatosMinas;
-	private double excoriaThomas;
+	private double escoriaThomas;
 	private double acidoFosforico;
 	private double multifMag;
 	
@@ -69,7 +69,7 @@ public class correcao_recuperacao {
 	public double getSuperFofatoTriplo(){
 		return superFofatoTriplo;
 	}
-	public void setDataProdutor(double superFofatoTriplo) {
+	public void setSuperFofatoTriplo(double superFofatoTriplo) {
 		this.superFofatoTriplo = superFofatoTriplo;
 	}
 	
@@ -124,11 +124,11 @@ public class correcao_recuperacao {
 	}
 	
 	
-	public double getExcoriaThomas(){
-		return excoriaThomas;
+	public double getEscoriaThomas(){
+		return escoriaThomas;
 	}
-	public void setExcoriaThomaso(double excoriaThomas) {
-		this.excoriaThomas = excoriaThomas;
+	public void setEscoriaThomaso(double escoriaThomas) {
+		this.escoriaThomas = escoriaThomas;
 	}
 	
 	

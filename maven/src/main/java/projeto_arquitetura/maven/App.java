@@ -6,6 +6,7 @@ import calculo_solos.*;
 
 public class App {
 	
+	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
    	Element elemento = new Element();
 
     public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class App {
 //    	dadosProd = app.dadosRecebProp();
     	
     	app.elemento = app.elementRecebido();
+    	app.correcaoRec = app.correcaoFosf();
     	 
     	System.out.println("S cmol: " + app.somaScmol(app.elemento));
     	
@@ -102,7 +104,7 @@ public class App {
     }
     
     
-    public double somaScmol(Element elemento) {
+       public double somaScmol(Element elemento) {
     	return elemento.getPotassio() + elemento.getCalcio() + elemento.getMagnesio();
     }
     public double somaCtc(Element elemento) {
@@ -110,6 +112,84 @@ public class App {
     }
     public double vAtual(Element elemento) {
     	return 100 * somaScmol(elemento) / somaCtc(elemento);
+    }
+    
+    
+    public CorrecaoRecuperacao correcaoFosf() {
+    	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
+    	Scanner lerCorrecao = new Scanner(System.in);
+    	
+    	System.out.println("Teor de Fósforo a atingir: ");
+    	correcaoRec.setTeorFosfAtingir(lerCorrecao.nextDouble());
+    	
+    	System.out.println("Fonte de Fósforo a utilizar: ");
+    	correcaoRec.setFonteFosfUtilizar(lerCorrecao.nextInt());
+    	
+    	System.out.println("Eficiência do Fósforo %: ");
+    	correcaoRec.setEficienciaFosf(lerCorrecao.nextDouble());
+    	
+    	lerCorrecao.close();
+    	return correcaoRec;
+    }
+    
+    
+    public CorrecaoRecuperacao fontesFosf() {
+    	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
+    	Scanner lerFontes = new Scanner(System.in);
+    	
+    	System.out.println("1 – Superfosfato Simples: ");
+    	correcaoRec.setSuperFofatoSimples(lerFontes.nextDouble());
+    	
+    	System.out.println("2 – Superfosfato Triplo: ");
+    	correcaoRec.setSuperFofatoTriplo(lerFontes.nextDouble());
+    	
+    	System.out.println("3 – MAP: ");
+    	correcaoRec.setMap(lerFontes.nextDouble());
+    	
+    	System.out.println("4 – DAP: ");
+    	correcaoRec.setDap(lerFontes.nextDouble());
+    	
+    	System.out.println("5 – Yoorin: ");
+    	correcaoRec.setYoorin(lerFontes.nextDouble());
+    	
+    	System.out.println("6 – Fosfato  Arad: ");
+    	correcaoRec.setFosfatoArad(lerFontes.nextDouble());
+    	
+    	System.out.println("7 – Fosfato  Gafsa: ");
+    	correcaoRec.setFosfatoGafsa(lerFontes.nextDouble());
+    	
+    	System.out.println("8 – Fosfato  Daoui: ");
+    	correcaoRec.setFosfatoDaoui(lerFontes.nextDouble());
+    	
+    	System.out.println("9 - Fosf.  Patos Minas: ");
+    	correcaoRec.setFosfPatosMinas(lerFontes.nextDouble());
+    	
+    	System.out.println("10 – Escória de Thomas: ");
+    	correcaoRec.setEscoriaThomaso(lerFontes.nextDouble());
+    	
+    	System.out.println("11 – Ácido Fosfórico: ");
+    	correcaoRec.setAcidoFosforico(lerFontes.nextDouble());
+    	
+    	System.out.println("12 – Multif.Magnesiano: ");
+    	correcaoRec.setMultifMag(lerFontes.nextDouble());
+    	
+    	lerFontes.close();
+    	return correcaoRec;
+    }
+    
+    public CorrecaoRecuperacao correcaoPot() {
+    	CorrecaoRecuperacao correcaoRec = new CorrecaoRecuperacao();
+    	Scanner lerCorrecao = new Scanner(System.in);
+    	
+    	System.out.println("Participação do Potássio na CTC, desejada:  ");
+    	correcaoRec.setPotCtcDesj(lerCorrecao.nextDouble());
+    	
+    	System.out.println("Fonte de Potássio a usar: ");
+    	correcaoRec.setFontPotUsar(lerCorrecao.nextInt());
+    	
+    	lerCorrecao.close();
+    	return correcaoRec;
+    	
     }
     
     
