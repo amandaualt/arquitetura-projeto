@@ -2,7 +2,16 @@ package calculo_solos;
 
 public class correcao_recuperacao {
 	
-	//fosforo
+	//coreção/recuperação de fosforo
+	private double teorFosfAtingir;
+	private int fonteFosfUtilizar;
+	private double eficienciaFosf;
+	
+	//coreção/recuperação de Potassio
+	private double potCtcDesj;
+	private double fontPotUsar;
+	
+	//fontes de fosforo
 	private double superFofatoSimples;
 	private double superFofatoTriplo;
 	private double map;
@@ -15,9 +24,41 @@ public class correcao_recuperacao {
 	private double excoriaThomas;
 	private double acidoFosforico;
 	private double multifMag;
-
 	
-	//fosforo
+	//fonte de potassio 
+	private double cloretoPot;
+	private double sulfatoPot;
+	private double sulfatoPotMag;
+	
+	//potassio = pot
+	//maginesio - mag
+	
+	//get e set coreção/recuperação de fosforo
+	public double getTeorFosfAtingir(){
+		return teorFosfAtingir;
+	}
+	public void setTeorFosfAtingir(double teorFosfAtingir) {
+		this.teorFosfAtingir = teorFosfAtingir;
+	}
+	
+	
+	public int getFonteFosfUtilizar(){
+		return fonteFosfUtilizar;
+	}
+	public void setFonteFosfUtilizar(int fonteFosfUtilizar) {
+		this.fonteFosfUtilizar = fonteFosfUtilizar;
+	}
+	
+	
+	public double getEficienciaFosf(){
+		return eficienciaFosf;
+	}
+	public void setEficienciaFosf(double eficienciaFosf) {
+		this.eficienciaFosf = eficienciaFosf;
+	}
+	
+	
+	// get e set fontes de fosforo
 	public double getSuperFofatoSimples(){
 		return superFofatoSimples;
 	}
@@ -104,5 +145,48 @@ public class correcao_recuperacao {
 	}
 	public void setMultifMag(double multifMag) {
 		this.multifMag = multifMag;
+	}
+
+
+	
+	
+	//get e set coreção/recuperação de Potassio
+	public double getPotCtcDesj(){
+		return potCtcDesj;
+	}
+	public void setPotCtcDesj(double potCtcDesj) {
+		this.potCtcDesj = potCtcDesj;
+	}
+	
+	
+	public double getFontPotUsar(){
+		return fontPotUsar;
+	}
+	public void setFontPotUsar(double fontPotUsar) {
+		this.fontPotUsar = fontPotUsar;
+	}
+
+
+	//fonte de potassio 
+	public double getCloretoPot(){
+		return cloretoPot;
+	}
+	public void setCloretoPot(double cloretoPot) {
+		this.cloretoPot = cloretoPot;
+	}
+	
+	
+	public double getSulfatoPot(){
+		return sulfatoPot;
+	}
+	public void setSultatoPot(double sulfatoPot) {
+		this.sulfatoPot = sulfatoPot;
+	}
+
+	public double getSulfatoPotMag(){
+		return sulfatoPotMag;
+	}
+	public void setSultatoPotMag(double sulfatoPotMag) {
+		this.sulfatoPotMag = sulfatoPotMag;
 	}
 }
