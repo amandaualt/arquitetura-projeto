@@ -1,4 +1,4 @@
-package calculo_solos;
+package projeto_arquitetura.maven;
 
 public class CorrecaoRecuperacao {
 	
