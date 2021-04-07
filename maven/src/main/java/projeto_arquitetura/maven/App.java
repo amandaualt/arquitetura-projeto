@@ -1,29 +1,22 @@
 package projeto_arquitetura.maven;
-
-import java.util.Scanner;
-
-
+        
 public class App {
-	CorrecaoRecuperacao correcaoRec;
+	RecCorrecaoPotassio correcaoRec;
    	Elements elemento;
         EquilibrioCTC equiCTC;
 
-    public static void main(String[] args) {
-    	DadosProdutor dadosProd = new DadosProdutor();
-    	
+    public static void main(String[] args) {    	
     	App app = new App();
-   
-//    	dadosProd = app.dadosRecebProp();
-    	
-    	app.elemento = app.elementRecebido();
-    	
+
+        
+        System.out.println("Dados: " + app.elemento);
     	System.out.println("\n");
-    	System.out.println("S cmol: " + app.equiCTC.somaScmol(app.elemento));
-    	System.out.println("\n");
-    	System.out.println("Ctc cmol: " + app.equiCTC.somaCtc(app.elemento));
-    	System.out.println("\n");
-    	System.out.println("V% Atual: " + app.equiCTC.vAtual(app.elemento));
-    	System.out.println("\n");
+//    	System.out.println("S cmol: " + app.equiCTC.somaScmol(app.elemento));;
+//    	System.out.println("\n");
+//    	System.out.println("Ctc cmol: " + app.equiCTC.somaCtcCmol(app.elemento));
+//    	System.out.println("\n");
+//    	System.out.println("V% Atual: " + app.equiCTC.vAtual(app.elemento));
+//    	System.out.println("\n");
 //    	app.correcaoRec = app.correcaoFosf();;
 //    	System.out.println("\n");
 //    	app.correcaoRec = app.fontesFosf();
@@ -36,37 +29,6 @@ public class App {
 //    	app.correcaoRec = app.fontesPot();
     
     }
-    
-    public Elements elementRecebido() {   
-       	Elements elemento = new Elements();
-
-    	Scanner lerDadosProdutor = new Scanner(System.in);
-    	
-    	System.out.println("Digite o valor do Fósforo: ");
-        elemento.setPotassio(lerDadosProdutor.nextDouble());
-    	
-    	System.out.println("Digite o valor do Potássio: ");
-    	elemento.setPotassio(lerDadosProdutor.nextDouble());
-    	
-    	System.out.println("Digite o valor do Cálcio: ");
-    	elemento.setCalcio(lerDadosProdutor.nextDouble());
-    	
-    	System.out.println("Digite o valor do Magnésio: ");
-    	elemento.setMagnesio(lerDadosProdutor.nextDouble());
-
-    	System.out.println("Digite o valor do Enxofre: ");
-    	elemento.setEnxofre(lerDadosProdutor.nextDouble());
- 
-    	System.out.println("Digite o valor do Alumínio: ");
-    	elemento.setAluminio(lerDadosProdutor.nextDouble());
-
-    	System.out.println("Digite o valor do H + Al: ");
-    	elemento.sethAl(lerDadosProdutor.nextDouble());
-    	
-    	lerDadosProdutor.close();
-    	return elemento;
-    
-    
     
 //    public CorrecaoRecuperacao correcaoFosf() {
 //    	
@@ -194,7 +156,7 @@ public class App {
 //    	return correcaoRec;
 //    
 //    ;
-    }
+    
     
     
 }

@@ -1,17 +1,17 @@
 package projeto_arquitetura.maven;
 
 public class EquilibrioCTC {
-        public double somaScmol(Elements elemento) {
+        public double somaScmol() {
 //    	return elemento.getPotassio() + elemento.getCalcio() + elemento.getMagnesio();
         return (0.15+5.76+1.63);
     }
-    public double somaCtc(Elements elemento) {
+    public double somaCtcCmol() {
 //    	return somaScmol(elemento) + elemento.gethAl()
-        return somaScmol(elemento)+5.35; 
+        return somaScmol()+5.35; 
     }
-    public double vAtual(Elements elemento) {
-        var scmol = somaScmol(elemento);
-        var ctc = somaCtc(elemento);
+    public double vAtual() {
+        var scmol = somaScmol();
+        var ctc = somaCtcCmol();
         
         if(scmol > 0 && ctc > 0 ){
             return scmol/ctc*100;

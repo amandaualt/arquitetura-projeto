@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projeto_arquitetura.maven;
 
-/**
- *
- * @author amand
- */
 public class RecCorrecaoFosf {
-    
+
+    private double teorFosfAtingir;
+    private int fonteFosfUtilizar;
+    private double eficienciaFosf;
+
+    public double getTeorFosfAtingir() {
+        return teorFosfAtingir;
+    }
+
+    public double getEficienciaFosf() {
+        return eficienciaFosf;
+    }
+
+    public int getFonteFosfUtilizar() {
+        return fonteFosfUtilizar;
+    }
+
+    //Metodos Gets
 }
