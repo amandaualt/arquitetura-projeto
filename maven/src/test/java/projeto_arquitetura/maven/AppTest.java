@@ -59,17 +59,17 @@ public class AppTest {
     
     @Test 
     public void testSomaSCmol(){
-        assertEquals(7.54, new EquilibrioCTC().somaScmol());
+        assertEquals(7.54, new EquilibrioCTC().somaScmol(0.15,5.76,1.63));
     }
     
     @Test 
     public void testSomaCTCCmol(){
-        assertEquals(12.89, new EquilibrioCTC().somaCtcCmol());
+        assertEquals(12.89, new EquilibrioCTC().somaCtcCmol(7.54, 5.35));
     }
     
     @Test 
     public void testVAtual(){
-        assertEquals(58.494957331264544, new EquilibrioCTC().vAtual());
+        assertEquals(58.494957331264544, new EquilibrioCTC().vAtual(7.54,12.89));
     }
 
     @Test

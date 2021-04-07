@@ -1,7 +1,7 @@
 package projeto_arquitetura.maven;
         
 public class App {
-	RecCorrecaoPotassio correcaoRec;
+//	RecCorrecaoPotassio correcaoRec;;
    	Elements elemento;
         EquilibrioCTC equiCTC;
 
