@@ -4,6 +4,7 @@ public class CorrecaoRecuperacaoPotassio {
 
     private double teorPotCtcDesj;
     private double valorPotassioRecebido;
+    private Solos texturaSolo;
 
     public CorrecaoRecuperacaoPotassio(double valorPotassioRecebido, double teorPotCtcDesj) {
         this.teorPotCtcDesj = teorPotCtcDesj;
@@ -37,7 +38,25 @@ public class CorrecaoRecuperacaoPotassio {
         return kgHaKK2O * 100 / consideraEficienciaPotassio / 100;
     }
 
-    public double calculoQuantidadeAplicar(double resultadoConsiderandoEficiaciaPotassio, double enumPotassio){
+    public double calculoQuantidadeAplicar(double resultadoConsiderandoEficiaciaPotassio, double enumPotassio) {
         return resultadoConsiderandoEficiaciaPotassio * 100 / enumPotassio;
+    }
+
+    public double calculoParticipacaoIdealPotassioCtc() {
+        switch (this.texturaSolo) {
+            case ARGILOSO:
+                return 3.0;
+            case TEXTURA_MEDIA:
+                return 3.0;
+            default:
+                return 0.0;
+        }
+    }
+    
+    public double calculoCustoPorHa(double valorFontePotassio, double quantidadePotassioAplicar){
+        if(valorFontePotassio != 0){
+            return ((valorFontePotassio*(quantidadePotassioAplicar * 2.42))/1000)/2.42;
+        }
+        return 0.0;
     }
 }

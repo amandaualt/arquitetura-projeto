@@ -1,21 +1,21 @@
 package projeto_arquitetura.maven;
 
 public enum EnumPotassio {
-    cloreto_de_potassio{
+    CLORETO_DE_POTASSIO{
         public double valorElement(){
             return 58.0;
         }
     },
-    sulfato_de_potassio{
+    SULFATO_DE_POTASSIO{
         public double valorElement(){
             return 52.0;
         }
     },
-     sulfato_de_potassio_e_magnesio{
+     SULFATO_DE_POTASSIO_E_MAGNESIO{
         public double valorElement(){
             return 22.0;
         }
-    }, nitrato_de_potassio{
+    }, NITRATO_DE_POTASSIO{
         public double valorElement(){
             return 44.0;
         }

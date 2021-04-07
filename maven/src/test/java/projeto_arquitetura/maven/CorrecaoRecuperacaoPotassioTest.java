@@ -3,7 +3,7 @@ package projeto_arquitetura.maven;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class RecCorrecaoTest {
+public class CorrecaoRecuperacaoPotassioTest {
 
     @Test
     public void testCalculoCTCCmolPotassio() {
@@ -44,13 +44,26 @@ public class RecCorrecaoTest {
     @Test
     public void testCalculoQuantidadeAplicar() {
         assertEquals(437.79,
-                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.cloreto_de_potassio.valorElement()), 0.1);
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.CLORETO_DE_POTASSIO.valorElement()), 0.1);
         assertEquals(488.30,
-                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.sulfato_de_potassio.valorElement()), 0.1);
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.SULFATO_DE_POTASSIO.valorElement()), 0.1);
         assertEquals(1154.18,
-                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.sulfato_de_potassio_e_magnesio.valorElement()), 0.1);
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.SULFATO_DE_POTASSIO_E_MAGNESIO.valorElement()), 0.1);
         assertEquals(577.09,
-                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.nitrato_de_potassio.valorElement()), 0.1);
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoQuantidadeAplicar(253.92, EnumPotassio.NITRATO_DE_POTASSIO.valorElement()), 0.1);
+
+    }
+       
+        @Test
+    public void testCalculoCustoPorHa() {
+        assertEquals(1225.812,
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoCustoPorHa(2800, 437.79), 0.1);
+        assertEquals(3476.696,
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoCustoPorHa(7120, 488.30), 0.1);
+        assertEquals(8617.107876,
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoCustoPorHa(7466, 1154.18), 0.1);
+        assertEquals(2308.36,
+                new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoCustoPorHa(4000, 577.09), 0.1);
 
     }
 }

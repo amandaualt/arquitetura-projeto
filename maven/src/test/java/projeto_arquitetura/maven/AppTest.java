@@ -11,50 +11,50 @@ public class AppTest {
     public void testValoresIdeaisArgiloso() {
         assertEquals( 
                 new Elements(9.0, 0.35, 6.0, 1.5, 9.0, 0.0, 0.0).getFosforo() , 
-                Solos.Argisolo.calculaValoresIdeais().getFosforo());
+                Solos.ARGILOSO.calculaValoresIdeais().getFosforo());
         assertEquals( 
                 new Elements(9.0, 0.35, 6.0, 1.5, 9.0, 0.0, 0.0).getPotassio(), 
-                Solos.Argisolo.calculaValoresIdeais().getPotassio());
+                Solos.ARGILOSO.calculaValoresIdeais().getPotassio());
         assertEquals( 
                 new Elements(9.0, 0.35, 6.0, 1.5, 9.0, 0.0, 0.0).getCalcio(), 
-               Solos.Argisolo.calculaValoresIdeais().getCalcio());
+               Solos.ARGILOSO.calculaValoresIdeais().getCalcio());
         assertEquals( 
                 new Elements(9.0, 0.35, 6.0, 1.5, 9.0, 0.0, 0.0).getMagnesio(), 
-               Solos.Argisolo.calculaValoresIdeais().getMagnesio());
+               Solos.ARGILOSO.calculaValoresIdeais().getMagnesio());
          assertEquals( 
                 new Elements(9.0, 0.35, 6.0, 1.5, 9.0, 0.0, 0.0).getEnxofre(), 
-                Solos.Argisolo.calculaValoresIdeais().getEnxofre());
+                Solos.ARGILOSO.calculaValoresIdeais().getEnxofre());
         assertEquals( 
                 new Elements(9.0, 0.35, 6.0, 1.5, 9.0, 0.0, 0.0).getAluminio(), 
-                Solos.Argisolo.calculaValoresIdeais().getAluminio());
+                Solos.ARGILOSO.calculaValoresIdeais().getAluminio());
         assertEquals( 
                 new Elements(9.0, 0.35, 6.0, 1.5, 9.0, 0.0, 0.0).gethAl(), 
-               Solos.Argisolo.calculaValoresIdeais().gethAl());
+               Solos.ARGILOSO.calculaValoresIdeais().gethAl());
     }
     
     @Test
     public void testValoresIdeaisTextMedia() {
         assertEquals( 
                 new Elements(12.0, 0.25, 4.0, 1.0, 6.0, 0.0, 0.0).getFosforo() , 
-                Solos.TextMedia.calculaValoresIdeais().getFosforo());
+                Solos.TEXTURA_MEDIA.calculaValoresIdeais().getFosforo());
         assertEquals( 
                 new Elements(12.0, 0.25, 4.0, 1.0, 6.0, 0.0, 0.0).getPotassio(), 
-                Solos.TextMedia.calculaValoresIdeais().getPotassio());
+                Solos.TEXTURA_MEDIA.calculaValoresIdeais().getPotassio());
         assertEquals( 
                 new Elements(12.0, 0.25, 4.0, 1.0, 6.0, 0.0, 0.0).getCalcio(), 
-                Solos.TextMedia.calculaValoresIdeais().getCalcio());
+                Solos.TEXTURA_MEDIA.calculaValoresIdeais().getCalcio());
         assertEquals( 
                 new Elements(12.0, 0.25, 4.0, 1.0, 6.0, 0.0, 0.0).getMagnesio(), 
-                Solos.TextMedia.calculaValoresIdeais().getMagnesio());
+                Solos.TEXTURA_MEDIA.calculaValoresIdeais().getMagnesio());
          assertEquals( 
                 new Elements(12.0, 0.25, 4.0, 1.0, 6.0, 0.0, 0.0).getEnxofre(), 
-                Solos.TextMedia.calculaValoresIdeais().getEnxofre());
+                Solos.TEXTURA_MEDIA.calculaValoresIdeais().getEnxofre());
         assertEquals( 
                 new Elements(12.0, 0.25, 4.0, 1.0, 6.0, 0.0, 0.0).getAluminio(), 
-                Solos.TextMedia.calculaValoresIdeais().getAluminio());
+                Solos.TEXTURA_MEDIA.calculaValoresIdeais().getAluminio());
         assertEquals( 
                 new Elements(12.0, 0.25, 4.0, 1.0, 6.0, 0.0, 0.0).gethAl(), 
-                Solos.TextMedia.calculaValoresIdeais().gethAl());
+                Solos.TEXTURA_MEDIA.calculaValoresIdeais().gethAl());
     }
     
     @Test 
