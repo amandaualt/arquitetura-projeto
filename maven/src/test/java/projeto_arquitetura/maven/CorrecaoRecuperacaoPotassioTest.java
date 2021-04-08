@@ -54,7 +54,7 @@ public class CorrecaoRecuperacaoPotassioTest {
 
     }
        
-        @Test
+    @Test
     public void testCalculoCustoPorHa() {
         assertEquals(1225.812,
                 new CorrecaoRecuperacaoPotassio(0.0, 0.0).calculoCustoPorHa(2800, 437.79), 0.1);
