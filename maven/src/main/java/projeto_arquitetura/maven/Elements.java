@@ -1,5 +1,7 @@
 package projeto_arquitetura.maven;
 
+//Codigo feito com base no modelo do Professor Gabriel Costa Silva ---------------------------------------
+
 public class Elements {
 
     private double fosforo;
