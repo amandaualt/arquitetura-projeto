@@ -2,7 +2,7 @@ package projeto_arquitetura.maven;
 
 //Codigo feito com base no modelo do Professor Gabriel Costa Silva 
 
-public enum Solos {
+public enum TiposDeSolos {
 
     ARGILOSO{
         public Elements calculaValoresIdeais(){

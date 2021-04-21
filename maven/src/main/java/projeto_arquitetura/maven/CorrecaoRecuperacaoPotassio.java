@@ -4,7 +4,7 @@ public class CorrecaoRecuperacaoPotassio {
 
     private double teorPotCtcDesj;
     private double valorPotassioRecebido;
-    private Solos texturaSolo;
+    private TiposDeSolos texturaSolo;
 
     public CorrecaoRecuperacaoPotassio(double valorPotassioRecebido, double teorPotCtcDesj) {
         this.teorPotCtcDesj = teorPotCtcDesj;

@@ -10,7 +10,7 @@ public class EquilibrioCTC {
         return scmol + hAl;
     }
 
-    public double vAtual(double scmol, double ctcCmol) {
+    public double calculaVAtual(double scmol, double ctcCmol) {
         if (scmol > 0 && ctcCmol > 0) {
             return scmol / ctcCmol * 100;
         } else {
